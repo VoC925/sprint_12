@@ -16,6 +16,7 @@ jobs:
       - name: Test
         run: go test -v ./...
 
+
 #CD
   deploy:
     name: Push Docker image to Docker Hub

@@ -1,5 +1,5 @@
 # базовый образ с alias builder 
-FROM golang:1.21.5 AS builder
+FROM golang:1.22.0 AS builder
 # рабочая директория
 WORKDIR /usr/src
 # копирование всех файлов и каталогов

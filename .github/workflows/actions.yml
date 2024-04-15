@@ -14,6 +14,8 @@ jobs:
         uses: golangci/golangci-lint-action@v3
         with:
           args: run --buildvcs=false
+        with:
+          args: run -buildvcs=false
       - name: Test
         run: go test -v ./...
 

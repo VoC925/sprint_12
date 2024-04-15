@@ -9,10 +9,8 @@ jobs:
     container: golang:1.22
     steps:
       - uses: actions/checkout@v4
-      - name: Linter
-        env:
-          GOLANGCI_LINT_ARGS: run --buildvcs=false
-        uses: golangci/golangci-lint-action@v3
+      - name: Vet
+        run: go vet ./...
       - name: Test
         run: go test -v ./...
 

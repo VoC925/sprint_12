@@ -6,13 +6,14 @@ jobs:
 #CI
   test:
     runs-on: ubuntu-latest
-    container:
-      image: golang:1.22.0
+    container: golang:1.22
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v4
       - name: Linter
         uses: golangci/golangci-lint-action@v3
+        with:
+          args: run --buildvcs=false
       - name: Test
         run: go test -v ./...
 
